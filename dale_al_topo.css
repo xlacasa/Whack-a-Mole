@@ -1,0 +1,95 @@
+html {
+    --color: #873087;
+    --color-shadow: #5c215c;
+    --topo-color: #94172d;
+    --topo-color-shadow: #67101f;
+    --hit-color: #0db57d;
+    --hit-color-shadow: #076d4d;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    text-align: center;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background-color: #232323;
+    height: 100%;
+    width: 100%;
+    color: #555555;
+}
+.header {
+    background-color: var(--color);
+    color: white;
+    padding: 20px 0;
+    width: 100%;
+}
+.sub-header {
+    background-color: white;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.score {
+    display: inline-block;
+    color: var(--color);
+    font-weight: 700;
+    font-size: 1.5em;
+}
+#score-number {
+    font-weight: 400;
+}
+h1 {
+    font-weight: 300;
+    font-size: 4em;
+    margin: 0;
+}
+.container {
+    margin: 10vh 0;
+    display: inline-block;
+    height: 70vw;
+    max-height: 60vh;
+    width: 70vw;
+    max-width: 60vh;
+}
+.board {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 26.66%;
+}
+.square {
+    background-color: var(--color);
+    width: 26.66%;
+    height: 100%;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 10px 0px 0px var(--color-shadow);
+    transition: box-shadow 0.1s, transform 0.1s, background-color 0.1s;
+}
+.square:active {
+    box-shadow: 0px 4px 0px 0px var(--color-shadow);
+    transform: translate(0, 6px);
+}
+.topo {
+    background-color: var(--topo-color);
+    box-shadow: 0px 10px 0px 0px var(--topo-color-shadow);
+}
+.topo:active {
+    box-shadow: 0px 4px 0px 0px var(--topo-color-shadow);
+}
+/* if a square is "hit", it's always pressed, no need for active class */
+.hit {
+    background-color: var(--hit-color);
+    box-shadow: 0px 4px 0px 0px var(--hit-color-shadow);
+    transform: translate(0, 6px);
+}
